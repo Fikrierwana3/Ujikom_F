@@ -85,7 +85,7 @@
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1">Pengguna</label>
+                                                <label for="exampleInputEmail1">Kategori</label>
                                                 <select class="form-control" name="id_kategori">
                                                     @foreach ($kategori as $data)
                                                         <option value="{{$data->id}}">{{$data->nama}}</option>
