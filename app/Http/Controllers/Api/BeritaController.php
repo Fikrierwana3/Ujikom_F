@@ -118,4 +118,10 @@ class BeritaController extends Controller
             'message' => 'Berita berhasil dihapus.'
         ]);
     }
+    
+    public function detail($id)
+{
+    $berita = Berita::with('kategori')->findOrFail($id);
+    return view('berita.detail', compact('berita'));
+}
 }

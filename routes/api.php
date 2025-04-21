@@ -38,3 +38,5 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('berita', BeritaController::class);
 });
+
+Route::get('/berita/{id}', [App\Http\Controllers\BeritaController::class, 'detail'])->name('berita.detail');
