@@ -59,12 +59,8 @@ class BeritaController extends Controller
     // Tampilkan berita berdasarkan ID
     public function show($id)
     {
-        $berita = berita::with(['user', 'kategori'])->findOrFail($id);
-
-        return response()->json([
-            'success' => true,
-            'data' => $berita
-        ]);
+        $berita = Berita::with(['user', 'kategori'])->findOrFail($id);
+        return view('beritas.show', compact('berita'));
     }
 
     // Update berita
@@ -118,7 +114,7 @@ class BeritaController extends Controller
             'message' => 'Berita berhasil dihapus.'
         ]);
     }
-    
+
     public function detail($id)
 {
     $berita = Berita::with('kategori')->findOrFail($id);

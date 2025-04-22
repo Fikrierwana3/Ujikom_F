@@ -105,13 +105,13 @@ class BeritaController extends Controller
     {
         $berita = berita::FindOrFail($id);
 
-        
-        
+
+
         $berita->judul = $request->judul;
         $berita->id_user = $request->id_user;
         $berita->id_kategori = $request->id_kategori;
         $berita->isi = $request->isi;
-        
+
         if ($request->hasFile('cover')) {
             $berita->deleteImage();
             $img = $request->file('cover');
@@ -119,7 +119,7 @@ class BeritaController extends Controller
             $img->move('img/berita', $name);
             $berita->cover = $name;
         }
-        
+
         $berita->save();
         return redirect()->route('berita.index')
             ->with('success', 'data berhasil di ubah');

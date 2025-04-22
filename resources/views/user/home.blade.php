@@ -184,7 +184,7 @@
                         <div class="col-lg-12">
                             <div class="footer-copy-right" style="text-align: center">
                                 <p>
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Portal Website | Assalaam News by <a href="https://www.instagram.com/_fikrierwana/#" target="_blank">Fikri Erwana</a>
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Portal Website | Assalaam News by <a href="https://www.instagram.com/erwanafikri/" target="_blank">Fikri</a>
                                 </p>
                             </div>
                         </div>
